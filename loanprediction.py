@@ -65,11 +65,11 @@ st.subheader('Users Inputs')
 st.dataframe(input_var, use_container_width = True)
 
 # import the transformers
-commercial_trans = joblib.load(' commercial_assets_value_scaler.pkl')
-income_trans = joblib.load(' income_annum_scaler.pkl')
-loan_trans = joblib.load(' loan_amount_scaler.pkl')
-luxury_trans = joblib.load(' luxury_assets_value_scaler.pkl')
-residential_trans = joblib.load(' residential_assets_value_scaler.pkl')
+commercial_trans = joblib.load('commercial_assets_value_scaler.pkl')
+income_trans = joblib.load('income_annum_scaler.pkl')
+loan_trans = joblib.load('loan_amount_scaler.pkl')
+luxury_trans = joblib.load('luxury_assets_value_scaler.pkl')
+residential_trans = joblib.load('residential_assets_value_scaler.pkl')
 
 # transform the users input with the imported scalers
 input_var[' commercial_assets_value'] = commercial_trans.transform(input_var[[' commercial_assets_value']])
